@@ -1,3 +1,6 @@
-﻿  MadeScore.cpp
-C:\Users\admin\source\repos\MadeReviewSys\MadeScore.cpp(19,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+﻿  App.cpp
+  MadeList.cpp
+  MadeScore.cpp
+C:\Users\admin\source\repos\MadeReviewSys\MadeScore.cpp(20,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   MADESys_TEST.vcxproj -> C:\Users\admin\source\repos\MadeReviewSys\x64\Debug\MADESys_TEST.exe

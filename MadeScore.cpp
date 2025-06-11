@@ -74,4 +74,11 @@ namespace MS
 		else
 			return ERROR;
 	}
+	void MadeScore::Print_Menu()
+	{
+		printf("%s\n", MENU_TITLE);
+		printf("%s\n", MSG_01);
+		printf("\n%s\n", SEL_ONE);
+		printf("%s\n", SEL_TWO);
+	}
 }

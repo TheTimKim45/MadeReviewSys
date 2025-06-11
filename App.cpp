@@ -94,5 +94,7 @@ int main()
 	testScore.Set_DIV_Grade(testScore.Get_E_C1(), testScore.Get_E_C2(), testScore.Get_E_C3(), testScore.Get_E());
 	testScore.CalculateFinalGrade();
 	
+	testScore.Print_Menu();
+
 	return 0;
 }

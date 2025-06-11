@@ -1,5 +1,11 @@
 #pragma once
 #include <iostream>
+
+//precompiler MACROS
+#define MENU_TITLE "===MADE REVIEW SYSTEMS==="
+#define SEL_ONE "01)--------REVIEWER"
+#define SEL_TWO "02)--------USER"
+#define MSG_01 "PLEASE SELECT ROLE:"
 namespace MS
 {
 	class MadeScore
@@ -61,7 +67,7 @@ namespace MS
 		ScoreUnit& Get_E_C3() { return e_ethics; } 
 		ScoreUnit& Get_E() { return GradeE; } 
 		//Displayers - printf stuff
-
+		void Print_Menu();
 		//Menu Simulation
 	};
 }
