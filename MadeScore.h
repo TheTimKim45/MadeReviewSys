@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 namespace MS
 {
 	class MadeScore
@@ -10,8 +10,9 @@ namespace MS
 		
 		struct ScoreUnit
 		{
-			int s_grade;
-			int s_weight;
+			int grade;
+			int weight;
+			std::string notes;
 			ScoreUnit();
 		};
 
@@ -34,10 +35,11 @@ namespace MS
 		MadeScore();
 		void CalculateFinalGrade();
 		//Manipulators
-		void Set_Division_Grade( ScoreUnit& c1,  ScoreUnit& c2,  ScoreUnit& c3, ScoreUnit& divisionUnit);
-		ResCode Set_SU_Grade(const int newGrade, ScoreUnit& scoreUnit);
-		ResCode Set_SU_Weight(const int newWeight, ScoreUnit& scoreUnit);
-		ResCode Set_Division_Weight(const int newWeight, ScoreUnit& divisionUnit);
+		void Set_DIV_Grade( ScoreUnit& c1,  ScoreUnit& c2,  ScoreUnit& c3, ScoreUnit& divisionUnit);
+		ResCode Set_CAT_Grade(const int newGrade, ScoreUnit& scoreUnit);
+		ResCode Set_CAT_Weight(const int newWeight, ScoreUnit& scoreUnit);
+		ResCode Set_CAT_Note(const std::string newNote, ScoreUnit& scoreUnit);
+		ResCode Set_DIV_Weight(const int newWeight, ScoreUnit& divisionUnit);
 		//Accessors
 		ScoreUnit& Get_M_C1() { return m_actions; } 
 		ScoreUnit& Get_M_C2() { return m_controls; } 
@@ -58,6 +60,9 @@ namespace MS
 		ScoreUnit& Get_E_C2() { return e_extramediacontent; } 
 		ScoreUnit& Get_E_C3() { return e_ethics; } 
 		ScoreUnit& Get_E() { return GradeE; } 
+		//Displayers - printf stuff
+
+		//Menu Simulation
 	};
 }
 
