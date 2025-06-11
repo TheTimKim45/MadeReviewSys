@@ -74,7 +74,7 @@ int main()
 	testScore.Set_SU_Grade(4, testScore.Get_D_C3());
 	testScore.Set_SU_Weight(3, testScore.Get_D_C3());
 
-	testScore.Set_Division_Weight(4, testScore.Get_D());
+	testScore.Set_Division_Weight(3, testScore.Get_D());
 
 	//E_DIVISION_CAT
 	testScore.Set_SU_Grade(0, testScore.Get_E_C1());
@@ -86,7 +86,7 @@ int main()
 	testScore.Set_SU_Grade(1, testScore.Get_E_C3());
 	testScore.Set_SU_Weight(1, testScore.Get_E_C3());
 
-	testScore.Set_Division_Weight(4, testScore.Get_E());
+	testScore.Set_Division_Weight(3, testScore.Get_E());
 
 	testScore.Set_Division_Grade(testScore.Get_M_C1(), testScore.Get_M_C2(), testScore.Get_M_C3(), testScore.Get_M());
 	testScore.Set_Division_Grade(testScore.Get_A_C1(), testScore.Get_A_C2(), testScore.Get_A_C3(), testScore.Get_A());

@@ -25,10 +25,11 @@ namespace MS
 
 	void MadeScore::Set_Division_Grade(ScoreUnit& c1, ScoreUnit& c2, ScoreUnit& c3, ScoreUnit& divisionUnit)
 	{
-		float calcGrade = ((((c1.s_grade + 5) * c1.s_weight) +
-			((c2.s_grade + 5) * c2.s_weight) +
-			((c3.s_grade + 5) * c3.s_weight)) /
-			(c1.s_weight + c2.s_weight + c3.s_weight)) * 10.f;
+		float calcGrade = static_cast<float>(c1.s_weight * (c1.s_grade + 5));
+		calcGrade += static_cast<float>(c2.s_weight * (c2.s_grade + 5));
+		calcGrade += static_cast<float>(c3.s_weight * (c3.s_grade + 5));
+		calcGrade /= static_cast<float>(c1.s_weight + c2.s_weight + c3.s_weight);
+		calcGrade *= 10.f;
 		divisionUnit.s_grade = static_cast<int>(calcGrade + 0.5f);
 	}
 
