@@ -88,10 +88,10 @@ int main()
 
 	testScore.Set_DIV_Weight(3, testScore.Get_E());
 
-	testScore.Set_DIV_Grade(testScore.Get_M_C1(), testScore.Get_M_C2(), testScore.Get_M_C3(), testScore.Get_M());
-	testScore.Set_DIV_Grade(testScore.Get_A_C1(), testScore.Get_A_C2(), testScore.Get_A_C3(), testScore.Get_A());
-	testScore.Set_DIV_Grade(testScore.Get_D_C1(), testScore.Get_D_C2(), testScore.Get_D_C3(), testScore.Get_D());
-	testScore.Set_DIV_Grade(testScore.Get_E_C1(), testScore.Get_E_C2(), testScore.Get_E_C3(), testScore.Get_E());
+	testScore.Set_DIV_Grade(testScore.Get_M(), testScore.CalcDivCat(0));
+	testScore.Set_DIV_Grade(testScore.Get_A(), testScore.CalcDivCat(1));
+	testScore.Set_DIV_Grade(testScore.Get_D(), testScore.CalcDivCat(2));
+	testScore.Set_DIV_Grade(testScore.Get_E(), testScore.CalcDivCat(3));
 	testScore.CalculateFinalGrade();
 	
 	testScore.Print_Menu();
