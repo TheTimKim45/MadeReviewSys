@@ -12,7 +12,7 @@ namespace ML
 		//std::ifstream InStream;
 		printf("List Imported!\n");
 		int i = 1;
-		for (auto& entry : ScoreList)
+		for (auto& entry : GameList_INIT)
 		{
 			printf("%d : ENTRY ADDED\n", i);
 			i++;
@@ -25,27 +25,27 @@ namespace ML
 
 	}
 
-	std::unordered_map<std::string, MS::MadeScore> MadeList::SortList(std::unordered_map<std::string, MS::MadeScore> unsorted)
+	std::vector<MS::MadeScore> MadeList::SortList(std::vector<MS::MadeScore> unsorted)
 	{
-		std::unordered_map<std::string, MS::MadeScore> sorted;
+		std::vector<MS::MadeScore> sorted;
 		for (auto& games : unsorted)
 		{
-			if (games.second.Get_GameGrade() >= 100)
+			if (games.Get_GameGrade() >= 100)
 				printf("whoopee!\n");
 		}
 		return sorted;
 	}
-	void MadeList::AddToList(std::string title, MS::MadeScore score)
+	void MadeList::AddToList(MS::MadeScore game)
 	{
 
-		ScoreList.insert(std::make_pair(title, score));
+		GameList_INIT.push_back(game);
 	}
 	void MadeList::DisplayList()
 	{
-		for (auto& entry : ScoreList)
+		for (auto& entry : GameList_INIT)
 		{
-			printf("TITLE : %s\n\nREVIEW STATS:\n", entry.first.c_str());
-			entry.second.Print_Menu();
+			printf("TITLE : %s\n\nREVIEW STATS:\n", entry.Get_GameTitle().c_str());
+			entry.Print_Menu();
 		}
 	}
 }

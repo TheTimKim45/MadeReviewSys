@@ -15,6 +15,9 @@ namespace MS
 	{
 		//Initial Game Score
 		GameGrade = 0;
+		//Initial Game Title
+		GameTitle = "";
+		//CAT Details
 		GradeM = ScoreDIV({
 			{M_C1, ScoreCAT()},
 			{M_C2, ScoreCAT()},
@@ -35,6 +38,11 @@ namespace MS
 			{E_C2, ScoreCAT()},
 			{E_C3, ScoreCAT()}
 			});
+		//CAT Vectors
+		AGRCAT_M.resize(0);
+		AGRCAT_A.resize(0);
+		AGRCAT_D.resize(0);
+		AGRCAT_E.resize(0);
 	}
 
 	void MadeScore::CalculateFinalGrade()
@@ -66,37 +74,24 @@ namespace MS
 			return ERROR;
 		//MODULARITY:
 		//Come back here and add an extra if needed
-		std::string c1, c2, c3;
+		std::vector<MadeScore::ScoreCAT>* catScores;
 		if (DivCode == M)
-		{
-			c1 = M_C1;
-			c2 = M_C2;
-			c3 = M_C3;
-		}
+			catScores = &AGRCAT_M;
 		else if (DivCode == A)
-		{
-			c1 = A_C1;
-			c2 = A_C2;
-			c3 = A_C3;
-		}
+			catScores = &AGRCAT_A;
 		else if (DivCode == D)
-		{
-			c1 = D_C1;
-			c2 = D_C2;
-			c3 = D_C3;
-		}
-		else 
-		{
-			c1 = E_C1;
-			c2 = E_C2;
-			c3 = E_C3;
-		}
+			catScores = &AGRCAT_D;
+		else
+			catScores = &AGRCAT_E;
 		//Actual calc time
 		float calcGrade = 0.f;
-		calcGrade += static_cast<float>(divisionUnit.CAT[c1].weight * (divisionUnit.CAT[c1].grade + CAT_MUL1));
-		calcGrade += static_cast<float>(divisionUnit.CAT[c2].weight * (divisionUnit.CAT[c2].grade + CAT_MUL1));
-		calcGrade += static_cast<float>(divisionUnit.CAT[c3].weight * (divisionUnit.CAT[c3].grade + CAT_MUL1));
-		calcGrade /= static_cast<float>(divisionUnit.CAT[c1].weight + divisionUnit.CAT[c2].weight + divisionUnit.CAT[c3].weight);
+		int calcWeight = 0;
+		for (auto& s : *catScores)
+		{
+			calcGrade += static_cast<float>(s.weight * (s.grade + CAT_MUL1));
+			calcWeight += s.weight;
+		}
+		calcGrade /= static_cast<float>(calcWeight);
 		calcGrade *= CAT_MUL2;
 		divisionUnit.Grade = static_cast<int>(calcGrade + 0.5f);
 		return SUCCESS;
@@ -141,6 +136,43 @@ namespace MS
 		}
 		else
 			return ERROR;
+	}
+
+	MadeScore::ResCode MadeScore::Set_Game_Title(const char* newTitle)
+	{
+		if (newTitle == "")
+			return ERROR;
+		GameTitle = newTitle;
+		return SUCCESS;
+	}
+
+	MadeScore::ResCode MadeScore::Add_To_AGRCAT(const ScoreDIV divUnit, const DivCat divCode)
+	{
+		if (divCode < M || divCode > E)
+			return ERROR;
+		else if (divUnit.CAT.size() == 0)
+			return ERROR;
+		if (divCode == M)
+		{
+			for (auto& m : divUnit.CAT)
+				AGRCAT_M.push_back(m.second);
+		}
+		else if (divCode == A)
+		{
+			for (auto& a : divUnit.CAT)
+				AGRCAT_A.push_back(a.second);
+		}
+		else if (divCode == D)
+		{
+			for (auto& d : divUnit.CAT)
+				AGRCAT_D.push_back(d.second);
+		}
+		else
+		{
+			for (auto& e : divUnit.CAT)
+				AGRCAT_E.push_back(e.second);
+		}
+		return SUCCESS;
 	}
 
 	void MadeScore::Print_Menu()

@@ -13,7 +13,7 @@ int main()
 	MadeScore testScore;
 
 	//TankHead Score Emulation Test
-	
+	testScore.Set_Game_Title("TankHead");
 	//M_DIVISION_CAT
 	testScore.Set_CAT_Grade(4, testScore.Get_M_C1());
 	testScore.Set_CAT_Weight(4, testScore.Get_M_C1());
@@ -54,6 +54,13 @@ int main()
 
 	testScore.Set_DIV_Weight(3, testScore.Get_E());
 
+	//Pre-Calculation Phase - Requires Transferrence from ScoreDIV.CAT to AGRCAT DS
+	testScore.Add_To_AGRCAT(testScore.Get_M(), testScore.CalcDivCat(0));
+	testScore.Add_To_AGRCAT(testScore.Get_A(), testScore.CalcDivCat(1));
+	testScore.Add_To_AGRCAT(testScore.Get_D(), testScore.CalcDivCat(2));
+	testScore.Add_To_AGRCAT(testScore.Get_E(), testScore.CalcDivCat(3));
+
+	//Actual Calculation Phase
 	testScore.Set_DIV_Grade(testScore.Get_M(), testScore.CalcDivCat(0));
 	testScore.Set_DIV_Grade(testScore.Get_A(), testScore.CalcDivCat(1));
 	testScore.Set_DIV_Grade(testScore.Get_D(), testScore.CalcDivCat(2));
@@ -62,9 +69,8 @@ int main()
 	testScore.CalculateFinalGrade();
 	
 	//Add testScore to ScoreList
-	importedList.AddToList("TankHead", testScore);
+	importedList.AddToList(testScore);
 	importedList.DisplayList();
-	//testScore.Print_Menu();
 
 	return 0;
 }

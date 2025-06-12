@@ -1,7 +1,6 @@
 #pragma once
 #include "MadeScore.h"
 #include <fstream>
-//#include <unordered_map>
 
 namespace ML
 {
@@ -9,7 +8,9 @@ namespace ML
 	{
 	private:
 		//Initial List that imports in ALL data from JSON
-		std::unordered_map<std::string, MS::MadeScore> ScoreList;
+		//INIT is the initial unsorted list that could have MULTIPLE entries of the same title
+		//SORT is the sorted list (per user's filters/preferences) and has no duplicates AND AGGREGATE SCORES
+		std::vector<MS::MadeScore> GameList_INIT, GameList_SORT;
 
 	public:
 		MadeList();
@@ -17,10 +18,10 @@ namespace ML
 		void ImportList();
 		void ExportList();
 		
-		std::unordered_map<std::string, MS::MadeScore> SortList(std::unordered_map<std::string, MS::MadeScore> unsorted);
+		std::vector<MS::MadeScore> SortList(std::vector<MS::MadeScore> unsorted);
 
 		//Test Functions
-		void AddToList(std::string title, MS::MadeScore score);
+		void AddToList(MS::MadeScore game);
 
 		//Display Functions
 		void DisplayList();

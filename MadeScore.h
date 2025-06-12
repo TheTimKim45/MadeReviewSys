@@ -36,7 +36,35 @@ namespace MS
 	private:
 		//Final Score
 		int GameGrade;
-		
+		//Game Title
+		std::string GameTitle;
+
+		//Further Modulation
+		//MODULARITY POINT-
+		//Should we desire the capability of creating aggregate scoring
+		//WE MUST create a std::vector of different ScoreCATs based off of their respective ScoreDIV
+		//EXAMPLE:
+		//ScoreDIV GradeM.CAT -> std::vector<ScoreCAT> DIVCATS_M
+		//WHEN Set_DIV_Grade is called, we then ACCESS DIVCATS specifically
+		//NOTE: REMEMBER, these are only used locally on the machine, NOT database interaction
+		//From there, when we call Set_DIV_Grade:
+		// float calcGrade = 0.f
+		// int calcDivide = 0;
+		//for(auto& cat : DIVCATS)
+		//{
+		//	calcGrade += static_cast<float>(cat.weight * (cat.graade + CAT_MULT1));
+		//	calcDivide += cat.weight;
+		//}
+		//calcGrade /= static_cast<float>(calcDivide);
+		//calcGrade *= 10.f;
+		//THIS would then make the Set_DIV_Grade into a more modular function BUT
+		//To make this work, we need to ensure that each ScoreDIV is able to unload ALL of its CAT content into the std::vector<ScoreCAT> FIRST
+		//and BEFORE THAT: we need to make sure that the program is able to understand that if there are multiple titles with the SAME NAME
+		//We must ensure that the system is able to unload and APPEND to the pre-existing std::vector<ScoreCAT>, NOT create a new one
+		//For Display Purposes:
+		//We must ensure that under ONE TITLE, different reviews will ONLY show reviewer-specific grade, weight, and notes
+		//Division Grade and Overall Grade will be unified under the "Title Header"
+
 		struct ScoreCAT
 		{
 			int grade = 0;
@@ -70,6 +98,8 @@ namespace MS
 
 		//Divisions
 		ScoreDIV GradeM, GradeA, GradeD, GradeE;
+		//Cat Vectors
+		std::vector<ScoreCAT> AGRCAT_M, AGRCAT_A, AGRCAT_D, AGRCAT_E;
 
 	public:
 		//Ctor
@@ -83,6 +113,8 @@ namespace MS
 		ResCode Set_CAT_Weight(const int newWeight, ScoreCAT& scoreUnit);
 		ResCode Set_CAT_Note(const std::string newNote, ScoreCAT& scoreUnit);
 		ResCode Set_DIV_Weight(const int newWeight, ScoreDIV& divisionUnit);
+		ResCode Set_Game_Title(const char* newTitle);
+		ResCode Add_To_AGRCAT(const ScoreDIV divUnit, const DivCat divCode);
 		//Accessors
 		ScoreDIV& Get_M() { return GradeM; } 
 		ScoreCAT& Get_M_C1() { return GradeM.CAT[M_C1]; }
@@ -105,6 +137,7 @@ namespace MS
 		ScoreCAT& Get_E_C3() { return GradeE.CAT[E_C3]; }
 
 		int Get_GameGrade() { return GameGrade; };
+		std::string Get_GameTitle() { return GameTitle; };
 		//Displayers - printf stuff
 		void Print_Menu();
 		//Menu Simulation
