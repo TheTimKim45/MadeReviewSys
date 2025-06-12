@@ -103,6 +103,8 @@ namespace MS
 		ScoreCAT& Get_E_C1() { return GradeE.CAT[E_C1]; }
 		ScoreCAT& Get_E_C2() { return GradeE.CAT[E_C2]; }
 		ScoreCAT& Get_E_C3() { return GradeE.CAT[E_C3]; }
+
+		int Get_GameGrade() { return GameGrade; };
 		//Displayers - printf stuff
 		void Print_Menu();
 		//Menu Simulation

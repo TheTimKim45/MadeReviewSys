@@ -1,5 +1,5 @@
 #include "MadeScore.h"
-
+#include <string>
 namespace MS
 {
 	MadeScore::ScoreDIV::ScoreDIV()
@@ -145,10 +145,10 @@ namespace MS
 
 	void MadeScore::Print_Menu()
 	{
-		/*printf("%s\n", MENU_TITLE);
-		printf("%s\n", MSG_01);
-		printf("\n%s\n", SEL_ONE);
-		printf("%s\n", SEL_TWO);*/
+		printf("FINAL SCORE: %d\n", GameGrade);
+		printf("M : %d\n", GradeM.Grade);
+		printf("A : %d\n", GradeA.Grade);
+		printf("D : %d\n", GradeD.Grade);
+		printf("E : %d\n", GradeE.Grade);
 	}
-	
 }

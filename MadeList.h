@@ -1,7 +1,7 @@
 #pragma once
 #include "MadeScore.h"
-#include <vector>
 #include <fstream>
+//#include <unordered_map>
 
 namespace ML
 {
@@ -9,15 +9,21 @@ namespace ML
 	{
 	private:
 		//Initial List that imports in ALL data from JSON
-		std::vector<MS::MadeScore> initImport;
-		//Final List that is displayed to User, dynamically created
-		std::vector<MS::MadeScore> displayList;
+		std::unordered_map<std::string, MS::MadeScore> ScoreList;
 
 	public:
-		void InitFirstList();
-		std::vector<MS::MadeScore> GetInitImport() { return initImport; };
-		void SetInitImport(std::vector<MS::MadeScore> newInitImport) { initImport = newInitImport; };
+		MadeList();
 		
+		void ImportList();
+		void ExportList();
+		
+		std::unordered_map<std::string, MS::MadeScore> SortList(std::unordered_map<std::string, MS::MadeScore> unsorted);
+
+		//Test Functions
+		void AddToList(std::string title, MS::MadeScore score);
+
+		//Display Functions
+		void DisplayList();
 	};
 }
 

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeScore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeScore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:App.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeScore.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B69A0897-EE9E-4E5C-835D-492DE337FC16}|MADESys_TEST.vcxproj|solutionrelative:MadeScore.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "App.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\App.cpp",
               "RelativeDocumentMoniker": "App.cpp",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\App.cpp",
               "RelativeToolTip": "App.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-06T20:10:35.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MadeScore.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.cpp",
               "RelativeDocumentMoniker": "MadeScore.cpp",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.cpp",
               "RelativeToolTip": "MadeScore.cpp",
-              "ViewState": "AgIAADsAAAAAAAAAAAAhwGAAAABpAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-06T22:17:21.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MadeScore.h",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.h",
               "RelativeDocumentMoniker": "MadeScore.h",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeScore.h",
               "RelativeToolTip": "MadeScore.h",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAGoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-06T20:31:15.451Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MadeList.cpp",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.cpp",
               "RelativeDocumentMoniker": "MadeList.cpp",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.cpp",
               "RelativeToolTip": "MadeList.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAowC4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-06T22:29:06.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MadeList.h",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.h",
               "RelativeDocumentMoniker": "MadeList.h",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\MadeReviewSys\\MadeList.h",
               "RelativeToolTip": "MadeList.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-06T22:28:39.79Z",
               "EditorCaption": ""
