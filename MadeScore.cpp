@@ -7,6 +7,12 @@ namespace MS
 
 	}
 
+	MadeScore::ScoreDIV::ScoreDIV(std::initializer_list<std::pair<std::string, ScoreCAT>> items)
+	{
+		for (auto& p : items) 
+			CAT[p.first] = p.second;
+	}
+
 	MadeScore::ScoreCAT::ScoreCAT()
 	{
 	}
@@ -68,6 +74,33 @@ namespace MS
 			return E;
 	}
 
+	MadeScore MadeScore::CombineDupTitles(const MadeScore newGameEntry)
+	{
+		
+		for (auto& c : newGameEntry.AGRCAT_M)
+			AGRCAT_M.push_back(c);
+		for (auto& c : newGameEntry.AGRCAT_A)
+			AGRCAT_A.push_back(c);
+		for (auto& c : newGameEntry.AGRCAT_D)
+			AGRCAT_D.push_back(c);
+		for (auto& c : newGameEntry.AGRCAT_E)
+			AGRCAT_E.push_back(c);
+
+		return *this;
+	}
+
+	void MadeScore::CrunchTitleEntry(MadeScore& testScore)
+	{
+		
+		//Actual Calculation Phase
+		testScore.Set_DIV_Grade(testScore.Get_M(), testScore.CalcDivCat(0));
+		testScore.Set_DIV_Grade(testScore.Get_A(), testScore.CalcDivCat(1));
+		testScore.Set_DIV_Grade(testScore.Get_D(), testScore.CalcDivCat(2));
+		testScore.Set_DIV_Grade(testScore.Get_E(), testScore.CalcDivCat(3));
+
+		testScore.CalculateFinalGrade();
+	}
+
 	MadeScore::ResCode MadeScore::Set_DIV_Grade(ScoreDIV& divisionUnit, const DivCat DivCode)
 	{
 		if (DivCode < M || DivCode > E)
@@ -90,6 +123,15 @@ namespace MS
 		{
 			calcGrade += static_cast<float>(s.weight * (s.grade + CAT_MUL1));
 			calcWeight += s.weight;
+		}
+		//ERROR CHECK : Cannot divide by 0
+		if (calcWeight == 0)
+		{
+			calcWeight = 1;
+		}
+		if (calcWeight == 1 && calcGrade == 0)
+		{
+			calcGrade = CAT_MUL1;
 		}
 		calcGrade /= static_cast<float>(calcWeight);
 		calcGrade *= CAT_MUL2;

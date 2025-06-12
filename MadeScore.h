@@ -79,7 +79,7 @@ namespace MS
 			int Grade = 0;
 			int Weight = 3;
 			ScoreDIV();
-			ScoreDIV(std::initializer_list < std::pair < std::string, ScoreCAT>> items) { for (auto& p : items) CAT[p.first] = p.second; };
+			ScoreDIV(std::initializer_list < std::pair < std::string, ScoreCAT>> items);
 		};
 
 		enum ResCode
@@ -100,6 +100,8 @@ namespace MS
 		ScoreDIV GradeM, GradeA, GradeD, GradeE;
 		//Cat Vectors
 		std::vector<ScoreCAT> AGRCAT_M, AGRCAT_A, AGRCAT_D, AGRCAT_E;
+		//Cat Tracker
+		int catNum = 1;
 
 	public:
 		//Ctor
@@ -107,6 +109,8 @@ namespace MS
 		//Calculators
 		void CalculateFinalGrade();
 		DivCat CalcDivCat(const int num);
+		MadeScore CombineDupTitles(const MadeScore newGameEntry);
+		void CrunchTitleEntry(MadeScore& testScore);
 		//Manipulators
 		ResCode Set_DIV_Grade(ScoreDIV& divisionUnit, const DivCat DivCode);
 		ResCode Set_CAT_Grade(const int newGrade, ScoreCAT& scoreUnit);

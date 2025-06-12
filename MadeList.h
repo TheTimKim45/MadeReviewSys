@@ -17,8 +17,10 @@ namespace ML
 		
 		void ImportList();
 		void ExportList();
-		
-		std::vector<MS::MadeScore> SortList(std::vector<MS::MadeScore> unsorted);
+		void GradeList();
+		void SortList(bool desc);
+		void TransferLists();
+		void CrunchList();
 
 		//Test Functions
 		void AddToList(MS::MadeScore game);
