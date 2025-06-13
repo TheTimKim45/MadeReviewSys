@@ -66,13 +66,19 @@ int main()
 	//Duplicate Entry
 	MadeScore testScore2 = testScore;
 	MadeScore testScore3 = testScore;
+	MadeScore NewTestScore = testScore;
+	MadeScore NewTestScore2 = testScore;
 	
+	NewTestScore.Set_Game_Title("Metal Gear Solid");
+	NewTestScore2.Set_Game_Title("Metal Gear Solid 2");
 	//Add testScore to ScoreList
 	GameTitleList.AddToList(testScore);
 	GameTitleList.AddToList(testScore2);
 	GameTitleList.AddToList(testScore3);
-	GameTitleList.TransferLists();
-	GameTitleList.CrunchList();
+	GameTitleList.AddToList(NewTestScore);
+	GameTitleList.AddToList(NewTestScore2);
+	GameTitleList.FinalizeInitList();
+	GameTitleList.GradeList();
 
 	//Print Results!
 	GameTitleList.DisplayList();

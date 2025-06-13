@@ -10,7 +10,7 @@ namespace ML
 		//Initial List that imports in ALL data from JSON
 		//INIT is the initial unsorted list that could have MULTIPLE entries of the same title
 		//SORT is the sorted list (per user's filters/preferences) and has no duplicates AND AGGREGATE SCORES
-		std::vector<MS::MadeScore> GameList_INIT, GameList_SORT;
+		std::vector<MS::MadeScore> GameList;
 
 	public:
 		MadeList();
@@ -19,7 +19,7 @@ namespace ML
 		void ExportList();
 		void GradeList();
 		void SortList(bool desc);
-		void TransferLists();
+		void FinalizeInitList();
 		void CrunchList();
 
 		//Test Functions

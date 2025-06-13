@@ -1,5 +1,5 @@
-﻿  MadeList.cpp
-C:\Users\tkim0\source\repos\MadeReviewSys\MadeList.cpp(66,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  MADESys_TEST.vcxproj -> C:\Users\tkim0\source\repos\MadeReviewSys\x64\Debug\MADESys_TEST.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  App.cpp
+  MadeList.cpp
+C:\Users\admin\source\repos\MadeReviewSys\MadeList.cpp(66,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  MADESys_TEST.vcxproj -> C:\Users\admin\source\repos\MadeReviewSys\x64\Debug\MADESys_TEST.exe
